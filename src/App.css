@@ -7,7 +7,32 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #f6f6f6;
-  color: #232331;
+  color: #f6f6f6;
   -webkit-font-smoothing: antialiased !important;
+  background: rgb(65, 133, 244);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+}
+
+.qr-generator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.qr-generator input {
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  width: 95%;
+  text-align: center;
+  font-size: 16px;
 }
