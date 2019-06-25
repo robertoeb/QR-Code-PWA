@@ -4,11 +4,12 @@ import QRCode from "react-google-qrcode";
 import Switch from "./components/Switch";
 
 import "./App.css";
+import Logo from "./assets/img/qr-code.svg";
 
 export default class App extends Component {
   state = {
     selectedTool: "generator",
-    result: "No result",
+    result: "Sem resultado",
     generatorData: "https://qrcode-pwa.netlify.com"
   };
 
@@ -49,7 +50,9 @@ export default class App extends Component {
           onScan={this.handleScan}
           style={{ width: "100%" }}
         />
-        <p>{result}</p>
+        <a href={result} target="_blank" rel="noopener noreferrer">
+          {result}
+        </a>
       </div>
     );
 
@@ -67,7 +70,10 @@ export default class App extends Component {
 
     return (
       <div className="App">
-        <h1>QR code PWA</h1>
+        <header>
+          <img src={Logo} alt="Logo" height="50px" />
+          <h1>QR code PWA</h1>
+        </header>
         {selectedTool === "reader" ? qrReader : qrGenerator}
         <Switch changed={this.handleSwitch} />
       </div>
