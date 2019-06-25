@@ -43,8 +43,6 @@ header img {
   padding: 10px;
   background: #f6f6f6;
   font-size: 16px;
-  font-weight: bold;
-  border: 2px solid #6ea0f2;
   border-radius: 10px;
   text-decoration: none;
   width: 100%;
@@ -65,7 +63,13 @@ header img {
   margin-top: 20px;
   border: none;
   border-radius: 10px;
-  width: 95%;
+  width: 100%;
   text-align: center;
   font-size: 16px;
+}
+
+@media only screen and (min-width: 426px) {
+  .qr-reader {
+    width: 322.75px;
+  }
 }

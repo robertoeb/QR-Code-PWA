@@ -4,9 +4,9 @@ import "./styles.css";
 const Switch = props => (
   <div className="Switch">
     <p id="generator-text">Gerador</p>
-    <label class="switch">
+    <label className="switch">
       <input type="checkbox" onChange={props.changed} />
-      <span class="slider round" />
+      <span className="slider round" />
     </label>
     <p id="reader-text">Leitor</p>
   </div>
