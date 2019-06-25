@@ -34,7 +34,7 @@ header img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 300px;
   margin-top: 20px;
 }
 
@@ -49,6 +49,11 @@ header img {
   text-align: center;
   color: #333;
   cursor: pointer;
+}
+
+.qr-reader video,
+.qr-reader div {
+  border-radius: 20px;
 }
 
 .qr-generator {
@@ -68,8 +73,8 @@ header img {
   font-size: 16px;
 }
 
-@media only screen and (min-width: 426px) {
-  .qr-reader {
-    width: 322.75px;
-  }
+.qr-generator img {
+  padding: 10px;
+  background: #fff;
+  border-radius: 20px;
 }

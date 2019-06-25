@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import QrReader from "react-qr-reader";
-import QRCode from "react-google-qrcode";
 import Switch from "./components/Switch";
-import ShareButton from "react-web-share-button";
 
 import "./App.css";
 import Logo from "./assets/img/qr-code.svg";
@@ -28,12 +26,6 @@ export default class App extends Component {
     const inputValue = event.target.value;
 
     this.setState({ generatorData: inputValue });
-
-    const qrCodeImage = document
-      .getElementById("qr-code")
-      .getElementsByTagName("div");
-
-    console.log(qrCodeImage[0].getAttribute("src"));
   };
 
   handleSwitch = () => {
@@ -65,8 +57,10 @@ export default class App extends Component {
 
     const qrGenerator = (
       <div className="qr-generator">
-        <QRCode data={generatorData} size={240} framed id="qr-code" />
-        <p />
+        <img
+          src={`https://chart.googleapis.com/chart?chs=280x280&choe=UTF-8&chld=M|0&cht=qr&chl=${generatorData}`}
+          alt="QR Code"
+        />
         <input
           type="text"
           onChange={this.handleInputChange}

@@ -8027,11 +8027,6 @@ react-scripts@3.0.1:
   optionalDependencies:
     fsevents "2.0.6"
 
-react-web-share-button@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/react-web-share-button/-/react-web-share-button-1.0.1.tgz#7c7a0aa114494bce93678e50fd2f4cb630c0c572"
-  integrity sha512-G4wzZ/kF84RTO//R+PuOkKdYhc8CzPEjCa5JGwxX6vNyvZ2oKHgijGiNzWtU8MTkzle6EzHEOdiPoGlV6egCsA==
-
 react@^16.6.3, react@^16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
