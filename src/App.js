@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import QrReader from "react-qr-reader";
 import Switch from "./components/Switch";
+import Generator from "./components/Generator";
 
 import "./App.css";
 import Logo from "./assets/img/qr-code.svg";
@@ -8,8 +9,8 @@ import Logo from "./assets/img/qr-code.svg";
 export default class App extends Component {
   state = {
     selectedTool: "generator",
-    result: "Sem resultado",
-    generatorData: "https://qrcode-pwa.netlify.com"
+    result: "Leia um QR Code",
+    generatorData: "https://www.qrcode-pwa.ml"
   };
 
   handleScan = data => {
@@ -49,24 +50,17 @@ export default class App extends Component {
           onScan={this.handleScan}
           style={{ width: "100%" }}
         />
-        <a href={result} target="_blank" rel="noopener noreferrer">
+        <a href={"http://" + result} target="_blank" rel="noopener noreferrer">
           {result}
         </a>
       </div>
     );
 
     const qrGenerator = (
-      <div className="qr-generator">
-        <img
-          src={`https://chart.googleapis.com/chart?chs=280x280&choe=UTF-8&chld=M|0&cht=qr&chl=${generatorData}`}
-          alt="QR Code"
-        />
-        <input
-          type="text"
-          onChange={this.handleInputChange}
-          value={generatorData}
-        />
-      </div>
+      <Generator
+        generatorData={generatorData}
+        handleInputChange={this.handleInputChange}
+      />
     );
 
     return (
