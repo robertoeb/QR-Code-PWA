@@ -10,7 +10,7 @@ export default class App extends Component {
   state = {
     selectedTool: "generator",
     result: "Leia um QR Code",
-    generatorData: "https://www.qrcode-pwa.ml"
+    generatorData: "www.qrcode-pwa.ml"
   };
 
   handleScan = data => {
