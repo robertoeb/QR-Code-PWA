@@ -67,7 +67,7 @@ export default class App extends Component {
       <div className="App">
         <header>
           <img src={Logo} alt="Logo" height="50px" />
-          <h1>QR code PWA!</h1>
+          <h1>QR code PWA</h1>
         </header>
         {selectedTool === "reader" ? qrReader : qrGenerator}
         <Switch changed={this.handleSwitch} />
